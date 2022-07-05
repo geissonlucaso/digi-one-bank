@@ -10,9 +10,3 @@ class Person {
 
     fun personInfo() = "$name, $cpf"
 }
-
-fun main() {
-    val person = Person()
-
-    println(person.personInfo())
-}
