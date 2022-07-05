@@ -6,11 +6,13 @@ class Person {
     var cpf:String = "123.456.789-12"
     private set
 
+    constructor()       // secundary constructor.
+
+    fun personInfo() = "$name, $cpf"
 }
 
 fun main() {
     val person = Person()
 
-    println(person.name)
-    println(person.cpf)
+    println(person.personInfo())
 }
