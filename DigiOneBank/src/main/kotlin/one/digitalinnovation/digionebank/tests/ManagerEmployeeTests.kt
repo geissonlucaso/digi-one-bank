@@ -4,7 +4,9 @@ import one.digitalinnovation.digionebank.Manager
 import one.digitalinnovation.digionebank.reports.ReportTools
 
 fun main() {
-    var manager = Manager("Geisson", "123.456.789-12", 1000.0)
+    var manager = Manager("Geisson", "123.456.789-12", 1000.0, "pw12")
     ReportTools.printReportEmployee(manager)
+
+    AuthentificationTest().authenticate(manager)
 
 }
