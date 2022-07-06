@@ -1,12 +1,8 @@
 package one.digitalinnovation.digionebank
 
-class Person {
-    var name:String = "Geisson"
-
-    var cpf:String = "123.456.789-12"
-    private set
-
-    constructor()       // secundary constructor.
-
-    fun personInfo() = "$name, $cpf"
+open class Person(
+    open val name: String,
+    open val cpf: String
+) {
+    fun info() = "${name} - ${cpf}"
 }
