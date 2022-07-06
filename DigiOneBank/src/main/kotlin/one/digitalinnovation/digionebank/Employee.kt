@@ -1,11 +1,15 @@
 package one.digitalinnovation.digionebank
 
-import java.math.BigDecimal
+abstract class Employee(
+    name: String,
+    cpf: String,
+    val salary: Double
+) : Person(name = name, cpf = cpf) {
+    protected abstract fun calculateAid(): Double
 
-class Employee(
-    override val name: String,
-    override val cpf: String,
-    val salary: BigDecimal
-) : Person(name, cpf) {
-
+    override fun toString(): String = "" +
+            "Name: $name - " +
+            "Cpf: $cpf - " +
+            "Salary: $salary - " +
+            "Aid: ${calculateAid()}".trimIndent()
 }
